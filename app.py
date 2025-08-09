@@ -287,7 +287,7 @@ if st.session_state.running:
         # small sleep to control rate
         time.sleep(batch_interval)
         # rerun to update UI (Streamlit will preserve session_state)
-        st.experimental_rerun()
+        st.rerun()
     except Exception as e:
         st.session_state.running = False
         st.error(f"Simulation stopped due to error: {e}")
